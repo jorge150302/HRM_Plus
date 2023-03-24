@@ -18,7 +18,7 @@ namespace HRM_Plus.Models
 
         [Column(TypeName = "varchar(50)")]
 
-        [Display(Name = "Descripcion")]
+        [Display(Name = "Descripción")]
         public string DescripcionPuesto { get; set; }
 
         [Required(ErrorMessage = "Debe ingresar un nivel de riesgo")]
@@ -33,6 +33,9 @@ namespace HRM_Plus.Models
         [Column(TypeName = "decimal(18,2)")]
 
         [DisplayFormat(DataFormatString = "{0:C2}")]
+
+        [Display(Name = "Salario Mínimo")]
+
         public decimal SalarioMinimo { get; set; }
 
         [Required(ErrorMessage = "Debe ingresar un monto")]
@@ -42,7 +45,11 @@ namespace HRM_Plus.Models
         [Column(TypeName = "decimal(18,2)")]
 
         [DisplayFormat(DataFormatString = "{0:C2}")]
+        [Display(Name = "Salario Máximo")]
+
         public decimal SalarioMaximo { get; set; }
+
+        [Display(Name = "Estado")]
 
         public bool isActivo { get; set; }
     }

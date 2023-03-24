@@ -1,10 +1,10 @@
 ﻿@model HRM_Plus.Models.Puesto
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Agregar";
 }
 
-<h1>Create Puesto</h1>
+<h1>Agregar</h1>
 
 <h4>Puesto</h4>
 <hr />
@@ -39,18 +39,18 @@
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="isActivo" /> @Html.DisplayNameFor(model => model.isActivo)
+                    <input class="form-check-input" asp-for="isActivo" /> Activo
                 </label>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Agregar" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" class="btn btn-secondary">Regresar a la lista</a>
 </div>
 
 @section Scripts {
