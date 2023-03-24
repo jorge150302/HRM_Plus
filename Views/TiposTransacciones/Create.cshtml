@@ -1,0 +1,43 @@
+﻿@model HRM_Plus.Models.TipoTransaccion
+
+@{
+    ViewData["Title"] = "Agregar";
+}
+
+<h1>Agregar</h1>
+
+<h4>Tipo de Transaccion</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NombreTipoTransaccíon" class="control-label"></label>
+                <input asp-for="NombreTipoTransaccíon" class="form-control" />
+                <span asp-validation-for="NombreTipoTransaccíon" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DescripcionTipoTransaccion" class="control-label"></label>
+                <input asp-for="DescripcionTipoTransaccion" class="form-control" />
+                <span asp-validation-for="DescripcionTipoTransaccion" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="isActivo" /> Activo
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Agregar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-secondary">Regresar a la lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,47 @@
+﻿@model IEnumerable<HRM_Plus.Models.TipoTransaccion>
+
+@{
+    ViewData["Title"] = "Tipos de Transacciones";
+}
+
+<h1>Tipos de Transacciones</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-sm btn-outline-primary btn-rounded">Agregar</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreTipoTransaccíon)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescripcionTipoTransaccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.isActivo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreTipoTransaccíon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescripcionTipoTransaccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.isActivo)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-success">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-primary">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Borrar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

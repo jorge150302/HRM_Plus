@@ -17,5 +17,7 @@ namespace HRM_Plus.Data
         public DbSet<HRM_Plus.Models.Puesto> Puesto { get; set; } = default!;
 
         public DbSet<HRM_Plus.Models.Departamento>? Departamento { get; set; }
+
+        public DbSet<HRM_Plus.Models.TipoTransaccion>? TipoTransaccion { get; set; }
     }
 }
